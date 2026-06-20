@@ -98,7 +98,7 @@ export const navGroups: NavGroup[] = [
     label: 'Finance',
     items: [
       {
-        title: 'Dashboard',
+        title: 'Overview',
         url: '/dashboard/finance',
         icon: 'chartPie',
         isActive: false,
