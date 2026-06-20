@@ -102,7 +102,7 @@ export default function IncomeDetail({ incomeId }: { incomeId: string }) {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5'>
+      <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5'>
         <SummaryCard label='Gross Income' value={formatCurrency(split.gross)} />
         <SummaryCard
           label='Expenses'
@@ -237,8 +237,10 @@ function SummaryCard({
   return (
     <Card className={accent ? 'border-primary/40' : undefined}>
       <CardHeader className='pb-2'>
-        <CardDescription>{label}</CardDescription>
-        <CardTitle className='text-xl tabular-nums @[200px]/card:text-2xl'>{value}</CardTitle>
+        <CardDescription className='truncate'>{label}</CardDescription>
+        <CardTitle className='min-w-0 text-xl tabular-nums [overflow-wrap:anywhere]'>
+          {value}
+        </CardTitle>
       </CardHeader>
       {hint && (
         <CardContent className='pt-0'>

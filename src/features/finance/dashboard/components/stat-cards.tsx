@@ -52,17 +52,17 @@ export function StatCards({ summary }: { summary: FinanceSummary }) {
   ];
 
   return (
-    <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5'>
+    <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5'>
       {cards.map((card) => {
         const BadgeIcon = card.badge.icon;
         return (
           <Card key={card.label} className='@container/card'>
             <CardHeader>
-              <CardDescription>{card.label}</CardDescription>
-              <CardTitle className='text-2xl font-semibold tabular-nums @[200px]/card:text-3xl'>
+              <CardDescription className='truncate'>{card.label}</CardDescription>
+              <CardTitle className='min-w-0 text-2xl font-semibold tabular-nums [overflow-wrap:anywhere]'>
                 {card.value}
               </CardTitle>
-              <CardAction>
+              <CardAction className='self-start'>
                 <Badge variant='outline'>
                   <BadgeIcon />
                   {card.badge.text}
