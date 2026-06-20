@@ -78,18 +78,5 @@ export const navGroups: NavGroup[] = [
         items: []
       }
     ]
-  },
-  {
-    label: 'Account',
-    items: [
-      {
-        title: 'Profile',
-        url: '/dashboard/profile',
-        icon: 'profile',
-        isActive: false,
-        shortcut: ['m', 'm'],
-        items: []
-      }
-    ]
   }
 ];
